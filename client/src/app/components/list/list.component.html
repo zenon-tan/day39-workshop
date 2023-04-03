@@ -1,0 +1,10 @@
+<div>
+    <p>Search results for "{{search}}":</p>
+    <table *ngFor="let c of characters; let idx = index">
+        <tr>
+            <td (click)="selectChar(idx)">{{ c.name }}</td>
+        </tr>
+    </table>
+    <button type="button" (click)="previousPage()" [disabled]="isPrevious()">Previous</button>
+    <button type="button" (click)="nextPage()" [disabled]="isNext()">Next</button>
+</div>

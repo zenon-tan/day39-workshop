@@ -1,0 +1,10 @@
+<div>
+    <h2>{{character.name}}</h2>
+    <img src="{{character.imageUrl}}" alt="" height="250vw">
+    <form [formGroup]="form" (ngSubmit)="addComment()">
+
+        <tr>Comment:</tr>
+        <tr><textarea name="" id="" cols="30" rows="10" formControlName="comment"></textarea></tr>
+        <tr><button type="submit">Add Comment</button></tr>
+    </form>
+</div>

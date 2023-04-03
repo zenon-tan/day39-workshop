@@ -1,0 +1,29 @@
+<div>
+    <h2>{{character.name}}</h2>
+    <img src="{{character.imageUrl}}" alt="" height="250vw">
+<div *ngIf="comments.length > 0">
+    <table>
+        <thead>
+            <th>Comments:</th>
+            <th>ID:</th>
+            <th>Time</th>
+        </thead>
+        <tbody *ngFor="let c of comments">
+            <tr>
+                <td>"{{c.comment}}"</td>
+                <td>{{c.commentId}}</td>
+                <td>{{c.timestamp | date: "dd/MM/yyyy"}}</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div></div>
+<div>
+
+    <button type="button" (click)="goComment()">Comment</button>
+
+    <button type="button" (click)="goBack()">Back</button>
+</div>
